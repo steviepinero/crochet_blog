@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pictures</h1>
+<center><h1>Posts</h1></center>
 
-<table>
+<table class="blogposts">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Url</th>
+      <!-- <th>Title</th>
+      <th>Url</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,12 +14,12 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= picture.title %></td>
         <td><%= image_tag picture.url %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <td class="picturetitle"><center><%= picture.title %></center></td>
     <% end %>
   </tbody>
 </table>

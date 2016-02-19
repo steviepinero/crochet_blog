@@ -15,8 +15,18 @@
  */
 
 
+.picturetitle{
+  clear: both;
+}
 
- /*//lavish css*/ 
+table.blogposts {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+ /*//lavish css*/
  body {
    margin: 0; }
 
