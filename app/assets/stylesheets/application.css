@@ -24,9 +24,14 @@ table.blogposts {
   margin-right:auto;
 }
 
+.userpictures img {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 400px;
+}
 
-
- /*//lavish css*/
+ /*//lavish color palette css*/
  body {
    margin: 0; }
 
