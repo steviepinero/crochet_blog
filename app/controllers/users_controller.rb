@@ -12,6 +12,16 @@ class UsersController < ApplicationController
   def show
   end
 
+  def change
+  create_table :users do |t|
+    t.string :username
+    t.string :email
+    t.string :encrypted_password
+    t.string :salt
+    t.timestamps
+end
+
+
   # GET /users/new
   def new
     @user = User.new
@@ -24,16 +34,16 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
-
-    respond_to do |format|
+    def create
+      @user = User.new(params[:user])
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        flash[:notice] = "You signed up successfully"
+        flash[:color]= "valid"
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        flash[:notice] = "Form is invalid"
+        flash[:color]= "invalid"
       end
+      render "new"
     end
   end
 
