@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'pictures#index'
-get '/pictures/new' => 'pictures#new'
+  get '/pictures/new' => 'pictures#new'
+
+  get 'signup' => 'users#new'
+  resources :users
+
+  # TODO  fix undefined method `user_name' for #<User id: nil, created_at: nil, updated_at: nil>
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
