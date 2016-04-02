@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   resources :users
 
-  # TODO  fix undefined method `user_name' for #<User id: nil, created_at: nil, updated_at: nil>
+  get '/login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
