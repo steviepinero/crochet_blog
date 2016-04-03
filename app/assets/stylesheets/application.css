@@ -47,6 +47,15 @@ table.blogposts {
     max-height: 400px;
 }
 
+/* pictures show page */
+
+.postImage img {
+  height: auto;
+  width: auto;
+  max-width: 600px;
+  max-height: 800px;
+}
+
  /*//lavish color palette css*/
  body {
    margin: 0; }
