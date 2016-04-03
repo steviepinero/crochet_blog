@@ -11,6 +11,11 @@
         <!-- image_tag is a rails view helper TODO integrate paperclip for file uploads -->
   <%= image_tag @picture.url %>
 </p>
-
+<p>
+  text:
+  <%= @picture.text %>
+</p>
+<p>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
+</p>
