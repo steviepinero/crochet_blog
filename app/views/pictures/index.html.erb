@@ -6,12 +6,12 @@
 <center><div class=".container-fluid userpictures">
   <ul>
     <% @pictures.each do |picture| %>
-        <li class="userpictures animated slideInUp"><%= image_tag picture.url %></li>
+        <li class="userpictures animated slideInUp col-xs-4"><%= image_tag picture.url %>
         <span><%= link_to 'Show', picture %></span>
         <span><%= link_to 'Edit', edit_picture_path(picture) %></span>
         <span><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></span>
 
-      <span class="picturetitle"><strong><%= picture.title %></strong></span>
+      <span class="picturetitle"><strong><%= picture.title %></strong></span></li>
     <% end %>
   </ul>
 </div></center>

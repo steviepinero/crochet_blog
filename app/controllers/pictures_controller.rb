@@ -2,6 +2,8 @@ class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :require_user, only: [:edit, :update, :destroy]
 
+
+#TODO show some of the post text under pictures
   # GET /pictures
   # GET /pictures.json
   def index
