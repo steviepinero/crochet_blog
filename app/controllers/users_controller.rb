@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-    has_many :pictures
+
   # GET /users
   # GET /users.json
   def index
