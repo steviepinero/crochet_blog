@@ -11,7 +11,8 @@
         <span><%= link_to 'Edit', edit_picture_path(picture) %></span>
         <span><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></span>
 
-      <span class="picturetitle"><strong><%= picture.title %></strong></span></li>
+      <span class="picturetitle"><strong><%= picture.title %></strong></span><br>
+      <span class="picture_text"><%= picture.text %></span></li>
     <% end %>
   </ul>
 </div></center>
