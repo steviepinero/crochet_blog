@@ -1,0 +1,17 @@
+<div class="field">
+<ul id="votes">
+  <li>
+    </label>
+    <label id="down">
+      <%= f.radio_button(:upvoteDownvote, -1) %>
+      <span class="glyphicon glyphicon-thumbs-down"></span>
+    </label>
+  </li>
+   <li>
+     <label id="up">
+       <%= f.radio_button(:upvoteDownvote, 1) %>
+       <span class="glyphicon glyphicon-thumbs-up"><%#=  class: 'thumb' %></span>
+   </li>
+ </ul>
+
+ </div>
